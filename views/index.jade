@@ -2,6 +2,8 @@ extends layout
 
 block content
   .main
+    a(href="/user") 用户
+    h1= title
     p Welcome to #{title}
     .article-list
       each item in articles

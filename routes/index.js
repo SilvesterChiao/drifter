@@ -23,9 +23,33 @@ router.get('/login', function(req, res, next){
 });
 
 router.post('/login', function(req, res, next){
-
+    
 });
 
+router.get('/user', function(req, res, next){
+    res.render('user', {
+        title: 'user',
+        names: [
+            'Emily',
+            'Nancy'
+        ]
+    });
+});
+
+router.post('/addUser', function(req, res, next){
+    // res.end(req.body.userName);
+    // console.log(req.body.userName);
+    res.render('user', {
+        title: 'user',
+        names: [
+            'Emily',
+            'Nancy',
+            req.body.userName
+        ]
+    })
+});
+
+// Ajax接口
 router.get('/getinfo',function  (req,res,next) {
 	res.header('Access-Control-Allow-Origin', '*');
     var _data = { email: 'example@163.com', name: 'jaxu' };

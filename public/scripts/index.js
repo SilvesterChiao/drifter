@@ -1,6 +1,6 @@
 (function(){
   var xmlrequest = new XMLHttpRequest();
-  var uri = 'http://172.26.81.182:3000/getinfo';
+  var uri = 'http://localhost:3004/getinfo';
   xmlrequest.open('GET', uri, true);
   xmlrequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xmlrequest.onreadystatechange = function(){
