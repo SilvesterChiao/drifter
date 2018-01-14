@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .main
+    p Welcome to #{title}
+    .article-list
+      each item in articles
+        .article
+          h3= item.title
+          p= item.content
+block script
+  script(src='/scripts/index.js')

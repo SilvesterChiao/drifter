@@ -3,7 +3,27 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', {
+    title: 'Express',
+    articles: [
+      {
+        title: '男人看了沉默，女人看了流泪',
+        content: '没错我就是传说中的标题党'
+      },
+      {
+        title: '震惊！25岁女教师竟对12岁小男孩做出这种事',
+        content: '此处省略不知道多少字'
+      }
+    ]
+  });
+});
+
+router.get('/login', function(req, res, next){
+  res.render('login', { title: 'Login' });
+});
+
+router.post('/login', function(req, res, next){
+
 });
 
 router.get('/getinfo',function  (req,res,next) {
@@ -33,7 +53,7 @@ router.get('/sites',function(req,res,next){
 				"Country": "USA"
 			},
 			{
-				"Name": "微博",
+				"Name": "新浪微博",
 				"URL": "www.weibo.com",
 				"Country": "CN"
 			}
