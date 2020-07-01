@@ -1,48 +1,18 @@
+/*
+ * @Author: SilvesterChiao
+ * @Date: 2020-06-16 10:55:22
+ * @LastEditors: SilvesterChiao
+ * @LastEditTime: 2020-06-16 10:55:22
+ */
 var express = require('express')
 var connection = require('../db/mysql.js')
 var router = express.Router()
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('Home/index', {
+    res.render('index', {
         title: 'Express',
         articles: [
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
-            {
-                title: '男人看了沉默，女人看了流泪',
-                content: '没错我就是传说中的标题党'
-            },
             {
                 title: '男人看了沉默，女人看了流泪',
                 content: '没错我就是传说中的标题党'
@@ -56,13 +26,13 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/login', function(req, res, next) {
-    res.render('Home/login', { title: 'Login' })
+    res.render('login', { title: 'Login' })
 })
 
 router.post('/login', function(req, res, next) {})
 
 router.get('/user', function(req, res, next) {
-    res.render('Home/user', {
+    res.render('user', {
         title: 'user',
         names: ['Emily', 'Nancy']
     })
@@ -184,7 +154,7 @@ router.get('/actor', function(req, res, next) {
 
     connection.end()
 
-    res.render('Home/actor', {
+    res.render('actor', {
         title: 'actor',
         names: ['Emily', 'Nancy']
     })
